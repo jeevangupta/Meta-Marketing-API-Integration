@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-#python3 ./get_facebook_ads_accounts.py
+# python3 ./facebook_ads_accounts.py
+
 import sys
 import requests
 import json
@@ -10,11 +11,11 @@ load_dotenv()
 
 def get_facebook_ads_account(access_token,api_version):
     try:
-        url = f'''https://graph.facebook.com/{api_version}/me/adaccounts?
-        fields=id,name,account_id,currency,timezone_id, email&access_token={access_token}'''
+        # url = f'''https://graph.facebook.com/{api_version}/me/adaccounts?
+        # fields=id,name,account_id,currency,timezone_id, email&access_token={access_token}'''
 
-        # url = f'''https://graph.facebook.com/{api_version}/me/businesses?
-        # fields=id,name,account_id,currency,timezone_id&access_token={access_token}'''
+        url = f'''https://graph.facebook.com/{api_version}/me/businesses?
+        fields=id,name,account_id,currency,timezone_id&access_token={access_token}'''
 
         headers = {}
 
